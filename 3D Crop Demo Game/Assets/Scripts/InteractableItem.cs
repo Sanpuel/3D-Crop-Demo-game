@@ -14,7 +14,7 @@ public class InteractableItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("fire2") & transform.parent != null)
+        if(Input.GetButtonDown("Fire2") & transform.parent != null)
         {
             transform.parent = null;
             GetComponent<Rigidbody>().useGravity = true;

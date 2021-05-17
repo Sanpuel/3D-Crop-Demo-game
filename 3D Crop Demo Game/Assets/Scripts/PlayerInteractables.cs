@@ -45,9 +45,12 @@ public class PlayerInteractables : MonoBehaviour
     {
         RaycastHit hit;
         Physics.Raycast(transform.position, transform.forward, out hit, shootRange);
-        if (hit.transform.gameObject.GetComponent<EnemyHealth>() != null)
+        if (hit.transform != null)
         {
-            hit.transform.gameObject.GetComponent<EnemyHealth>().ReduceHP(damage);
+            if (hit.transform.gameObject.GetComponent<EnemyHealth>() != null)
+            {
+                hit.transform.gameObject.GetComponent<EnemyHealth>().ReduceHP(damage);
+            }
         }
     }
 }
