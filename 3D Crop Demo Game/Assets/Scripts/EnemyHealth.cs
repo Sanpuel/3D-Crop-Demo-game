@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] int scoreValue = 1;
     public int hp = 1;
     public void ReduceHP(int damage) 
     {
@@ -12,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        FindObjectOfType<Gamesession>().AddToScore(scoreValue);
     }
 }
 
