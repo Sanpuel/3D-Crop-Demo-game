@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InteractableItem : MonoBehaviour
-{
+{ 
     public Vector3 offset;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.tag = "Crop";
     }
 
     // Update is called once per frame
@@ -28,7 +28,8 @@ public class InteractableItem : MonoBehaviour
                 transform.parent.transform.up * offset.y;
 
 
-
+            
         }
+     
     }
 }
